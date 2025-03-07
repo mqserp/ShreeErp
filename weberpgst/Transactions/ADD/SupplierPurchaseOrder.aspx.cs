@@ -1846,14 +1846,11 @@ Columns.Add("SHECess");
                     DataTable dtPrefix = CommonClasses.Execute("SELECT * FROM PO_TYPE_MASTER WHERE ES_DELETE =0 AND PO_T_COMP_ID='" + (string)Session["CompanyId"] + "' AND PO_T_CODE  ='" + ddlPOType.SelectedValue + "'");
                     if (dt.Rows.Count > 0)
                     {
-                        //PCPCL0000
-                        if (true)
-                        {
-                        }
+                        
                         Po_Doc_no = Convert.ToInt32(dt.Rows[0]["SPOM_PO_NO"]);
                         Po_Doc_no = Po_Doc_no + 1;
                         string strYear = Convert.ToDateTime(Session["CompanyOpeningDate"].ToString()).ToString("dd/MMM/yyyy").Substring(7, 4) + "-" + Convert.ToDateTime(Session["CompanyClosingDate"].ToString()).ToString("dd/MMM/yyyy").ToString().Substring(9, 2);
-                        strPONo = "SPC-" + strYear + "-" + dtPrefix.Rows[0]["PO_T_FIRST_LETTER"].ToString() + "-" + CommonClasses.GenBillNo(Po_Doc_no);
+                        strPONo = "QAPPL-" + strYear + "-" + dtPrefix.Rows[0]["PO_T_FIRST_LETTER"].ToString() + "-" + CommonClasses.GenBillNo(Po_Doc_no);
                     }
                     SqlTransaction trans = null;
 

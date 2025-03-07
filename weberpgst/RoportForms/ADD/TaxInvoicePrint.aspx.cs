@@ -492,8 +492,8 @@ public partial class RoportForms_ADD_TaxInvoicePrint : System.Web.UI.Page
 
                         }
 
-                        rptname.Load(Server.MapPath("~/Reports/rptTaxInvoiceHiematecGST1.rpt"));  //rptTaxInvoiceGST  //rptTaxInvoice  rptTaxInvoiceGST
-                        rptname.FileName = Server.MapPath("~/Reports/rptTaxInvoiceHiematecGST1.rpt"); //rptTaxInvoiceHiematecGST for Hiematec
+                        rptname.Load(Server.MapPath("~/Reports/rptTaxInvoiceEInv.rpt"));  //rptTaxInvoiceGST  //rptTaxInvoice  rptTaxInvoiceGST
+                        rptname.FileName = Server.MapPath("~/Reports/rptTaxInvoiceEInv.rpt"); //rptTaxInvoiceHiematecGST for Hiematec
 
                         rptname.Refresh();
                         //rptname.SetDataSource(dtfinal);
